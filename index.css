@@ -1,0 +1,281 @@
+
+ul li a {
+        color: black; /* Set this to your desired color */
+    }
+
+/* genric claases used throughout site  */
+body p,h1,h2,h3,h4,h5,span, a{
+
+    font-family: "RMFirstClass Solid",Arial,Helvetica,"Nimbus Sans L",sans-serif;
+
+}
+.page-header{
+    min-height: 537px;
+    background-color: rgb(218, 32, 42);
+   }
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+.font-weight-bold {
+font-weight: bold;
+}
+
+.bg-red{
+    background-color: rgb(218, 32, 42)!important;
+}
+
+.bg-green {
+ background-color:rgb(178, 220, 178);
+
+}
+.text-green{
+    color: #008a00;
+}
+.text-yellow{
+color:rgb(253, 218, 36);
+}
+   
+.big-yellow-text{
+color:rgb(253, 218, 36);
+font-size: 59px;  
+font-weight: 600;
+}
+
+.text-red {
+color: rgb(218, 32, 42)!important;
+}
+
+.button {
+    background-color: rgb(218, 32, 42);
+    border-radius: 30px;
+    color:white;
+    font-weight: 600;
+    border: 0;
+   }
+
+   .border-radius-full {
+    border-radius: 10px;
+}
+
+.shadow-effect{
+box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 56px 0px;
+}
+
+.page-header{
+    min-height: 537px;
+    background-color: rgb(218, 32, 42);
+   }
+
+.border {
+  border-bottom: 0px!important;
+  border-top-right-radius: 10px!important;
+  border-top-left-radius: 10px;
+
+}
+
+.border-example {
+  border: 1px solid white!important;
+  border-top-right-radius: 10px!important;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.flex-1{
+          flex:1 1 0;  
+        }
+.fa {
+    text-decoration: none;
+    color:white;
+}
+
+.button-hover:hover {
+background: #B70D12;
+}
+  
+.element-hover:hover {
+background-color: #F8E7E7!important;
+color:rgb(218, 32, 42)!important;
+        
+}
+ 
+.element-hover-image-scaling:hover {
+    background-color: #F8E7E7 !important;
+    color: rgb(218, 32, 42) !important;
+}
+
+.element-hover-image-scaling:hover img {
+    transform: scale(1.04); 
+    transition: transform 0.3s ease; 
+}
+
+.red-text-hover  a:hover , .red-text-hover-icon  i:hover  {
+color: red!important;
+    }
+
+footer {
+    background: #2A2A2D; color:rgb(220, 220, 222); 
+    font-size: 17px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* genric claases used throughout site end here */
+
+ /* animations on the site */
+
+@keyframes header-animation-desktop {
+  from {
+  transform:translateY(20%);
+  opacity:0;
+  }
+  to {
+  transform:translateY(0%);
+  opacity:1;
+  }
+}
+
+
+@keyframes header-animation-mobile {
+  from {
+  transform:translateY(10%);
+  opacity:0;
+  }
+  to {
+  transform:translateY(0%);
+  opacity:1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+.header-animation-mobile{
+animation-name: header-animation-mobile;
+animation-duration:2s;
+}
+}
+
+@media only screen and (min-width: 600px) {
+.header-animation {
+animation-name: header-animation-desktop;
+animation-duration:2s;
+}
+}
+
+/* animations on the end here here site */
+
+
+/* mobile media query's and classes    */
+
+
+   @media only screen and (max-width: 600px) {
+.mobile-nav-navbar {
+  width: 90%;
+  height: 100vh;
+  background: white;
+  transition: left 2s;
+  left:100%;
+  z-index: 999;
+  position:absolute;
+  top:0%;
+}
+
+.left {
+    left:10%;
+}
+
+.padding-header-mobile {
+padding-bottom: 280px!important; 
+}
+.mobile-pos {
+bottom: 248px!important;
+}
+
+.mobile-text-spider-section span {
+font-size: 21px!important;
+
+}
+.margin-mobile-spider-section{
+    margin-top: -205px;
+}
+
+.mobile-text h1 {
+font-size: 40px!important;
+}
+
+.mobile-text span {
+font-size: 35px!important;
+}
+
+.mobile-text-paragraph li {
+font-size: 18px!important;
+}
+
+   }
+
+
+
+
+/*  desktop media querys and claases  */
+
+
+@media only screen and (min-width: 600px) {
+.padding-nav-bar {
+   padding-left: 215px!important; 
+   padding-right: 215px!important;
+
+  }
+
+
+    .page-header h1{
+    font-size: 60px;
+    line-height: 64px;
+} 
+.page-header span{
+    font-size: 60px;
+    line-height: 64px;
+} 
+
+   .desktop-pos {
+     bottom:92px;
+   }
+
+   .main-content-padding {
+    padding-left: 145px!important; 
+    padding-right: 145px!important;
+
+   }
+.spider-special-col-padding {
+   padding-left:145px;
+   padding-top:50px;
+}
+
+.service-row-padding {
+   padding-left:126px;
+   padding-right:126px;
+}
+
+.padding-help-section{
+
+padding-top:100px; 
+padding-bottom:80px;
+}
+
+.position-absolute-md{
+    position: absolute!important;
+    transform: translate(-50%,-50%)!important;;
+    left:75%!important;;
+    top:50%!important;;
+}
+
+.main-footer-padding{
+padding-left: 133px!important;
+padding-right: 133px!important;
+}
+
+footer a:hover{
+       color: white !important;
+     }  
+}
+
+/*  desktop media querys and claases end here  */
