@@ -1,4 +1,4 @@
-    <script> 
+
 
         const hamburger = document.getElementById('hamburger_menu');
         const navbar = document.getElementById('mobile_nav');
@@ -20,4 +20,4 @@
             navbar.classList.toggle('d-none');
             
         });
-    </script>
+
