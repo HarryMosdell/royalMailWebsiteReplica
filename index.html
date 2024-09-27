@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+</script>
+    <title>Basic HTML Page</title>
+    <style>
+ul li a {
+        color: black; /* Set this to your desired color */
+    }
+
+/* genric claases used throughout site  */
+body p,h1,h2,h3,h4,h5,span, a{
+
+    font-family: "RMFirstClass Solid",Arial,Helvetica,"Nimbus Sans L",sans-serif;
+
+}
+.page-header{
+    min-height: 537px;
+    background-color: rgb(218, 32, 42);
+   }
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+.font-weight-bold {
+font-weight: bold;
+}
+
+.bg-red{
+    background-color: rgb(218, 32, 42)!important;
+}
+
+.bg-green {
+ background-color:rgb(178, 220, 178);
+
+}
+.text-green{
+    color: #008a00;
+}
+.text-yellow{
+color:rgb(253, 218, 36);
+}
+   
+.big-yellow-text{
+color:rgb(253, 218, 36);
+font-size: 59px;  
+font-weight: 600;
+}
+
+.text-red {
+color: rgb(218, 32, 42)!important;
+}
+
+.button {
+    background-color: rgb(218, 32, 42);
+    border-radius: 30px;
+    color:white;
+    font-weight: 600;
+    border: 0;
+   }
+
+   .border-radius-full {
+    border-radius: 10px;
+}
+
+.shadow-effect{
+box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 56px 0px;
+}
+
+.page-header{
+    min-height: 537px;
+    background-color: rgb(218, 32, 42);
+   }
+
+.border {
+  border-bottom: 0px!important;
+  border-top-right-radius: 10px!important;
+  border-top-left-radius: 10px;
+
+}
+
+.border-example {
+  border: 1px solid white!important;
+  border-top-right-radius: 10px!important;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.flex-1{
+          flex:1 1 0;  
+        }
+.fa {
+    text-decoration: none;
+    color:white;
+}
+
+.button-hover:hover {
+background: #B70D12;
+}
+  
+.element-hover:hover {
+background-color: #F8E7E7!important;
+color:rgb(218, 32, 42)!important;
+        
+}
+ 
+.element-hover-image-scaling:hover {
+    background-color: #F8E7E7 !important;
+    color: rgb(218, 32, 42) !important;
+}
+
+.element-hover-image-scaling:hover img {
+    transform: scale(1.04); 
+    transition: transform 0.3s ease; 
+}
+
+.red-text-hover  a:hover , .red-text-hover-icon  i:hover  {
+color: red!important;
+    }
+
+footer {
+    background: #2A2A2D; color:rgb(220, 220, 222); 
+    font-size: 17px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* genric claases used throughout site end here */
+
+ /* animations on the site */
+
+@keyframes header-animation-desktop {
+  from {
+  transform:translateY(20%);
+  opacity:0;
+  }
+  to {
+  transform:translateY(0%);
+  opacity:1;
+  }
+}
+
+
+@keyframes header-animation-mobile {
+  from {
+  transform:translateY(10%);
+  opacity:0;
+  }
+  to {
+  transform:translateY(0%);
+  opacity:1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+.header-animation-mobile{
+animation-name: header-animation-mobile;
+animation-duration:2s;
+}
+}
+
+@media only screen and (min-width: 600px) {
+.header-animation {
+animation-name: header-animation-desktop;
+animation-duration:2s;
+}
+}
+
+/* animations on the end here here site */
+
+
+/* mobile media query's and classes    */
+
+
+   @media only screen and (max-width: 600px) {
+.mobile-nav-navbar {
+  width: 90%;
+  height: 100vh;
+  background: white;
+  transition: left 2s;
+  left:100%;
+  z-index: 999;
+  position:absolute;
+  top:0%;
+}
+
+.left {
+    left:10%;
+}
+
+.padding-header-mobile {
+padding-bottom: 280px!important; 
+}
+.mobile-pos {
+bottom: 248px!important;
+}
+
+.mobile-text-spider-section span {
+font-size: 21px!important;
+
+}
+.margin-mobile-spider-section{
+    margin-top: -205px;
+}
+
+.mobile-text h1 {
+font-size: 40px!important;
+}
+
+.mobile-text span {
+font-size: 35px!important;
+}
+
+.mobile-text-paragraph li {
+font-size: 18px!important;
+}
+
+   }
+
+
+
+
+/*  desktop media querys and claases  */
+
+
+@media only screen and (min-width: 600px) {
+.padding-nav-bar {
+   padding-left: 215px!important; 
+   padding-right: 215px!important;
+
+  }
+
+
+    .page-header h1{
+    font-size: 60px;
+    line-height: 64px;
+} 
+.page-header span{
+    font-size: 60px;
+    line-height: 64px;
+} 
+
+   .desktop-pos {
+     bottom:92px;
+   }
+
+   .main-content-padding {
+    padding-left: 145px!important; 
+    padding-right: 145px!important;
+
+   }
+.spider-special-col-padding {
+   padding-left:145px;
+   padding-top:50px;
+}
+
+.service-row-padding {
+   padding-left:126px;
+   padding-right:126px;
+}
+
+.padding-help-section{
+
+padding-top:100px; 
+padding-bottom:80px;
+}
+
+.position-absolute-md{
+    position: absolute!important;
+    transform: translate(-50%,-50%)!important;;
+    left:75%!important;;
+    top:50%!important;;
+}
+
+.main-footer-padding{
+padding-left: 133px!important;
+padding-right: 133px!important;
+}
+
+footer a:hover{
+       color: white !important;
+     }  
+}
+
+
+
+
+
+/*  desktop media querys and claases end here  */
+
+    </style>
+
+
+
+</head>
+<body>
+<nav>
+<div class="d-flex px-3 px-md-0  align-items-center py-2  m-auto" style="max-width:  1052.52px;">
+<div class="  d-flex flex-grow-1    " style=" line-height: 70px;">
+    
+ <div class="d-lg-block d-none"  style="width:100px; height:70px; "> 
+<img class="w-100 "src="https://www.royalmail.com/themes/custom/rmlcwr/rmg_logo.svg" alt="">
+</div>   
+
+<div class="d-block d-lg-none"  style="width: 69px; "> 
+<img class="w-100 "src="https://www.royalmail.com/themes/custom/rmlcwr/rmg_logo.svg" alt="">
+</div>   
+
+<ul class="d-flex gap-5 mx-3 mx-md-5  m-0 p-0 red-text-hover" style="list-style: none; height:fit-content; font-weight: bold;">
+<li class=" "> <a class="text-decoration-none " href="">Personal <span style="vertical-align:bottom ; display: inline-block; transform: rotate(90deg);"> > </span> </a> </li>
+<li class="d-none d-lg-block"> <a class="text-decoration-none " href="">Business</a> </li>
+<li class="d-none d-lg-block">  <a class="text-decoration-none " href="">Stamps & supplies</a> </li>
+
+</ul>
+
+</div>
+
+<div class="   "> 
+<!-- desktop right side of the navbar !-->
+<div class="d-none d-md-flex  align-items-center">
+    <div class="me-3 red-text-hover"> <a> Log in </a> <span> |</span>  <a> Register </a></div>    
+
+    <div class="red-text-hover-icon"> <a>  <i  style="font-size:22px; color:black; " class=" fa fa-search me-3"></i> </a></div>
+    
+    <button style="padding-top:13px; padding-bottom: 13px; "class="button button-hover font-weight-600 text-white px-3 "><a> Send an item </a></button>
+
+    
+    </div>
+<!-- desktop right side of the navbar !-->
+
+ <!-- mobile left sider of the navbar starts here!-->
+<div class="d-flex d-lg-none  align-items-center ">
+  
+    <div> <i  style="font-size:22px; color:black;" class=" fa fa-search me-3"></i></div>
+  
+    <div id="hamburger_menu" class=" bg-white ">
+        <div class="" style="width:30px; height:3px; background-color: #2A2A2D;"></div>
+        <div class="mt-1" style="width:30px; height:3px; background-color: #2A2A2D;"></div>
+        <div class="mt-1" style="width:30px; height:3px; background-color: #2A2A2D;"></div>
+       
+    </div>
+
+    
+    </div>
+ <!-- mobile left sider of the navbar ends here!-->
+
+</div>
+
+</div>
+
+</nav>
+<div id="mobile_nav" class="mobile-nav-navbar d-block d-lg-none   ">
+    <div id="cross" style="height:30px; width:30px; background-color: #B70D12;"> </div>
+</div>
+    <main>
+       
+ <div class=" page-header py-md-5  padding-header-mobile " style="">
+   
+    
+       <div class="container">
+        <div class="row  main-content-padding px-3 header-animation header-animation-mobile"  >
+ <div class="col-lg-6 mobile-text mobile-text-paragraph"> 
+<h1 class="text-white font-weight-600 mb-md-2 mb-0" > your delivery is </h1>
+<h1 class="mt-md-2 mt-0"> <span class="text-yellow big-yellow-text "> IN GOOD HANDS</span>
+
+</h1>
+
+<ul class="text-white mt-3 d-none d-md-block" style="font-size:22px;">
+
+    <li>Trusted to deliver your mail for </li>
+    <li> FREE doorstep collection for your items</li>
+    <li> Lowest reported carbon footprint per parcel delivery in the UK <div class="d-inline-block " style="height:23px; width:15px;">
+    <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-06/footprints.png" alt=""> </div></li>
+
+</ul>
+
+
+ </div>
+ <div class="col-lg-6  px-0 " >
+
+    <div  class=" "> <!-- wrapper main section of form starts here-->
+
+        <div  class=" "> <!-- wrapper header section of form starts here-->
+   <!-- header for form starts here-->
+  <div class=" d-flex gap-2 ">  
+     <div style="font-weight:bold;" class="bg-white py-2 px-5 border "> Send</div>
+     <div class="bg-white py-2 px-5 border"> Track</div>
+  </div>
+  </div><!-- wrapper header section of form ends here-->
+<!-- header for form ends here-->
+
+<!-- main section of form starts here-->
+<div class="border-example bg-white">
+<div class="px-4  mt-4 py-1 " >
+<div class="font-weight-bold" > What are you looking to send?</div>
+<div class="w-100  bg-white py-3 px-2" style="border:1px solid grey;" > What are you looking to send?</div>
+<button class="w-100 position-relative button  py-3 mt-3 d-flex justify-content-center gap-2 font-weight-bold button-hover"  >
+    <div style="height:23px; width:23px;"> <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_functional_hero_send.svg" alt=""></div>
+    
+    Send your item</button>
+<div style="font-size:15px; " class="text-center mt-3 red-text-hover"> <a style=""class="text-decoration-underline"> Already have a label? Arrange a collection only </a> </div>
+<div class="d-flex justify-content-md-center mt-4 mb-2 red-text-hover flex-column flex-md-row align-items-center gap-1 gap-md-5" style=" font-size:15px;" >
+<div > <a class="text-decoration-underline"> UK delivery prices </a> </div>
+<div>  <a class="text-decoration-underline">  International prices </a></div>
+</div>
+</div>
+</div>
+</div>
+<!-- main section of form ends here-->
+ </div>
+</div>
+       
+
+   
+
+ </div>
+
+</div>
+
+</div>
+
+ <div class="container position-relative main-content-padding desktop-pos mobile-pos  px-4" style="" >
+    <div class="wrapper shadow-effect header-animation header-animation-mobile overflow-hidden border-radius-full" >
+
+    <div class="row " style="margin:0;">
+        <div class="col-md-3 bg-white px-4 py-3 py-md-4 px-md-3 element-hover " >  
+            <div class=" d-flex flex-row flex-md-column gap-md-0 gap-2">
+                <div class="d-lg-none d-block" style="height:30px; width:30px;  font-size: 18px;">
+                    <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_ql_parcel_collect.svg" alt="">
+                    </div>
+
+            <div class="d-lg-block d-none" style="height:40px; width:40px;  font-size: 18px;">
+            <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_ql_parcel_collect.svg" alt="">
+            </div>
+            
+            <h3 class="d-none d-lg-block"  style=" font-weight: 800;">New drop off points  </h3>  
+            <h4 class="my-0 d-block d-lg-none"  style=" font-weight: 800;">New drop off points as </h4>  
+
+        </div>
+
+
+               lorem lorem lorem lorem lorem loremlorem lorem lorem
+               lorem lorem lorem
+            </div>
+           <div class="col-md-3 bg-white px-4 py-3 py-md-4 px-md-3 element-hover " >  
+            <div class=" d-flex flex-row flex-md-column gap-md-0 gap-2">
+            <div class="d-lg-block d-none" style="height:40px; width:40px;  ">
+            <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_ql_moving_home.svg" alt="">
+            </div>           
+            <div class="d-lg-none d-block" style="height:30px; width:30px;  ">
+                <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_ql_moving_home.svg" alt="">
+                </div>     
+                <h3 class="d-none d-lg-block"  style=" font-weight: 800;">Moving home?  </h3>  
+                <h4 class="my-0 d-block d-lg-none"  style=" font-weight: 800;">Moving home?  </h4>  
+
+            </div>
+               Lets make sure all your mail reaches you
+            </div>
+       <div class="col-md-3 bg-white px-4 py-3 py-md-4 px-md-3 element-hover " >  
+        <div class=" d-flex flex-row flex-md-column gap-md-0 gap-2">
+            <div class="d-lg-none d-block" style="height:30px; width:30px;  font-size: 18px;">
+            <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_ql_return_an_item.svg" alt="">
+            </div>  
+
+            <div class="d-lg-block d-none" style="height:40px; width:40px;  ">
+                <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_ql_return_an_item.svg" alt="">
+                </div>  
+
+          
+
+                <h3 class="d-none d-lg-block" style=" font-weight: 800;">Return an item  </h3>   
+                <h4 class="my-0 d-block d-lg-none" style=" font-weight: 800;">Return an item  </h4> 
+        </div>
+           Something not right? We'll collect and take it back
+        </div>
+        <div class="col-md-3 bg-white px-4 py-3 py-md-4 px-md-3 element-hover " >  
+            <div class="d-flex flex-row flex-md-column gap-md-0 gap-2">
+     
+
+                <div class="d-lg-none d-block" style="height:30px; width:30px;  font-size: 18px;">
+                    <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_ql_missed_a_delivery.svg" alt="">
+                    </div>   
+                <div class="d-none d-lg-block" style="height:40px; width:40px;  font-size: 18px;">
+                    <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_ql_missed_a_delivery.svg" alt="">
+                    </div>   
+                    <h3 class="d-none d-lg-block" style=" font-weight: 800;"> Missed a delivery?  </h3>  
+                    <h4 class="my-0 d-block d-lg-none" style=" font-weight: 800;"> Missed a delivery?   </h4> 
+                </div>
+               Arrange to have your item redileverd
+            </div>
+   </div>
+
+   </div>
+</div>
+
+   <div class="container-fluid bg-green margin-mobile-spider-section" >
+    <div class="row  pb-5 pb-md-0">
+<div class="col-md-6 order-2 order-md-1 spider-special-col-padding mobile-text-spider-section" >
+
+
+   <h2> <span class="text-red " > Spiders Special Stamps </span></h2> 
+    
+    <h4> <span style=" font-size:22px; font-weight: 700;" class="" > New stamps and souvenirs celebrating spiders and their web-weaving wonder</span></h4>
+
+    <button class="button button-hover py-3 px-4 d-lg-block d-none"> Pre order now</button>
+    <button class="button  button-hover w-100 d-block d-lg-none py-3"> Pre order now</button>
+</div>
+<div class="col-md-6 bg-danger p-0 order-1 order-md-2 ">
+
+   <div>
+    <img class="w-100 d-none d-lg-block" src="https://www.royalmail.com/sites/royalmail.com/files/2024-09/12-24_rm-spiders-homepage_dt_723x310.jpg" alt="">
+    <img class="w-100 d-block d-lg-none" src="https://www.royalmail.com/sites/royalmail.com/files/2024-09/12-24_RM-SPIDERS-SHOP_BNR_Mbl_HERO_320x267.jpg" alt="">
+
+
+</div> 
+
+</div>
+
+    </div>
+
+   </div>
+   
+
+
+<div class="  ">
+   <div class="container  service-row-padding py-5  ">
+    <h2 class="text-start  d-block d-lg-none font-weight-bold ">  Lets find the right service for you</h2>
+    <h1  style=" font-size:40px;" class="  d-none d-lg-block font-weight-bold  py-0">  Lets find the right service for you</h1>
+    <div class="row ">
+<div class="col-md-4   p-0" >
+    <div class="  h-100 px-4  ">
+     <div class=" h-100 px-3 pt-4 shadow-effect">
+   <div class="w-100">
+    <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_sc1_sending.png" alt="">
+   </div>
+    <div class="mt-4">
+        <h3 style="font-size:22px" class="font-weight-600"> Sending mail or parcels? </h3> Quick, convenient, and available seven days a week. Start
+        sending your letters from as little as 85p and parcels from £3.19.</div>
+        <div>
+      fdffd
+           <ul class="text-red mt-3 text-decoration-none px-0" style="list-style: none;">
+               <li class=" ">UK delivery prices </li>
+               <li>International delivery prices </li>
+               <li>Find a postcode </li>
+               <li>View all sending services </li>
+               
+           </ul>
+           <div style="border-top: 2px solid black;" class="mt-5 py-3 text-text">dsdssd</div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+
+
+    <div class="col-md-4   p-0" >
+        <div class="  h-100 px-3  ">
+         <div class=" h-100 px-3 pt-4 shadow-effect">
+       
+    <div class="w-100">
+
+        <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_sc2_receiving.png" alt="">
+       </div>
+
+<div class="mt-4">
+    
+    <h3 style="font-size:22px" class="font-weight-600">
+    Recieving mail?  </h3> Out and about? Not to worry. Track and manage how you receive mail and deliveries.</div>
+     <div>
+   fdffd
+  
+   <ul class="text-red mt-3 px-0" style="list-style: none;">
+            <li class="">Track </li>
+            <li>Redeliver </li>
+            <li>Redirect your mail </li>
+            <li>Pay a fee </li>
+        </ul>
+     </div>
+
+</div>
+</div>
+</div>
+
+
+<div class="col-md-4   p-0" >
+    <div class="  h-100 px-3  ">
+     <div class=" h-100 px-3 pt-4 shadow-effect">
+        
+    <div class="w-100">
+
+        <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_sc3_selling_online.png" alt="">
+       </div>
+
+       <div class="mt-4">
+        
+        <h3 style="font-size:22px" class="font-weight-600">
+            Selling online? </h3> If you’re a Marketplace seller, you can benefit from 
+            putting all your orders into a Click & Drop account.
+
+        </div>
+        <div>
+      
+           <ul class="mt-3">
+               <li>Integrated with most popular stores including Amazon, eBay, Shopify and many more </li>
+               <li>Supports multiple accounts </li>
+               <li>Print postage from your desk  </li>
+               <li>Use our collection service, or drop off at a convenient location </li>
+           </ul>
+        </div>
+    </div>
+    </div>
+  
+</div>
+
+
+<div class="row px-3  mt-4 mx-0">
+
+
+   <div class="col-12 shadow-effect  p-0  ">
+
+<div class="row m-0 px-3 pt-4 ">
+    
+        <div class="col-md-4 p-0">
+
+ <div class="w-100">
+
+        <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_sc4_register.jpg" alt="">
+       </div>
+    </div>
+
+
+    <div class="col-md-8 p-0 ">
+<div class="mt-4">
+    
+    <h3 style="font-size:22px" class="font-weight-600">
+        Make things a bit easier for yourself </h3>
+        
+        <p>Track and manage your deliveries with a Personal Account. </p>
+      
+        <a class="text-red text-decoration-none ">Sign up now </a>
+
+        </div>
+    </div>
+
+
+
+     </div>
+
+    </div>
+
+   </div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+<div class="container service-row-padding padding-help-section" style="">
+    <div class="mb-5">
+   <h1 class="font-weight-bold"> Help is on the way </h1> 
+   <h5> We have plenty of useful features to help make your day that little bit easier </h5> 
+</div>
+<div class="row  p-0">
+
+    <div class="col-md-4    px-3 ">
+        <div class="bg-white h-100 d-flex flex-column shadow-effect element-hover-image-scaling">
+
+            <div class="overflow-hidden ">
+                
+                <img class="w-100 d-none d-lg-block " style="height:196.922px;" src="https://www.royalmail.com/sites/royalmail.com/files/2024-07/hp_parcel_collect.jpg" alt="">
+                <img class="w-100 d-block d-lg-none" style="height:163.922px;"  src="https://www.royalmail.com/sites/royalmail.com/files/2024-07/hp_parcel_collect.jpg" alt="">
+            </div>
+
+            <div class="p-4  ">
+                <h5 class="font-weight-bold"> Free Parcel Collect</h5>
+                <p class=""> whrn you buy postagbe online you can collect for free</p>
+                </div>
+        </div>
+        
+        </div>
+    <div class="col-md-4    px-3">
+        <div class="bg-white h-100 d-flex flex-column shadow-effect element-hover-image-scaling ">
+
+            <div style="" class="overflow-hidden ">
+                
+                <img class="w-100 d-none d-lg-block" style="height:196.922px;" src=" https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_promos_health.jpg" alt="">
+                <img class="w-100 d-block d-lg-none" style="height:163.922px;"  src="https://www.royalmail.com/sites/royalmail.com/files/2024-07/hp_parcel_collect.jpg" alt="">
+
+            </div>
+
+            <div class="p-4">
+                <h5 class="font-weight-bold"> free parcel collection</h5>
+                <p class=""> NHS prescriptions delivered to your doorstep</p>
+           
+            </div>
+        </div>
+        
+        </div>
+
+
+
+    <div class="col-md-4   px-3">
+
+        <div class="bg-white h-100 d-flex flex-column shadow-effect element-hover-image-scaling">
+
+            <div class="overflow-hidden ">
+                
+                <img class="w-100 d-none d-lg-block" style="height:196.922px;" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_promos_help.jpg" alt="">
+                <img class="w-100 d-block d-lg-none" style="height:163.922px;"  src="https://www.royalmail.com/sites/royalmail.com/files/2024-07/hp_parcel_collect.jpg" alt="">
+
+            </div>
+
+            <div class="p-4  ">
+
+            <h5 class="font-weight-bold"> Help & Support</h5>
+                <p class=""> Visit our help centre for everything Royal Mail</p>
+            </div>
+        </div>
+
+        </div>
+</div>
+
+</div>
+
+
+<div class="w-100  position-relative ">
+<div class="w-100  ">
+    <img class="w-100 d-none d-lg-block" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_fwb_sustainability_desktop.jpg" alt="">
+    <img class="w-100 d-lg-none d-block "  src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_fwb_sustainability_mobile.jpg" alt="">
+
+</div>
+<div class="col-md-4 bg-white px-4  py-5 px-md-5 position-absolute-md border-radius-full   " >
+    <div class="d-block d-lg-none  ">
+        <h1 class="font-weight-600" style="font-size: 40px; font-family: RMFirstClass Inline!important;">
+            
+            <span style="font-size:40px;" class="text-green">The UK's greenest delivery option* </span> <span> for letters and parcels </span></h1>
+        </div>
+
+  <div class="d-none d-lg-block  ">
+    <h1 class="font-weight-600" style="font-size: 40px; font-family: RMFirstClass Inline;">
+        
+        <span class="text-green">The UK's greenest delivery option** </span> <span> for letters and parcels </span></h1>
+    </div>
+    <p class="">Based on publicly available reported gCO2e per parcel from other UK parcel operators.</p> 
+   <button class="d-none d-lg-block button button-hover  py-3 px-5"> find out more</button>
+   <button class="button button-hover w-100 py-3 px-5 d-block d-lg-none"> find out more</button>
+</div>
+</div>
+    </main>
+
+    <footer style="">
+      <div class="container  main-footer-padding d-flex flex-column  py-4">  
+      <!-- desktop footer-->
+        <div class="d-md-flex d-none "> 
+            <div class="flex-1 " > 
+                <div>
+
+             <div class="mb-3 text-white font-weight-600"><a>  Tools  </a></div>
+             <div class="mb-3" style="font-weight: 500;"> <a> Track your item </a></div>
+             <div class="mb-3">   <a>Postcode finder </a></div>
+             <div class="mb-3"> <a>Price finder</a></div>
+             <div class="mb-3"> <a>Online postage </a></div>
+             <div class="mb-3"> <a>Book a Redelivery </a></div>
+             <div class="mb-3"> <a>Get the Royal Mail App </a></div>
+            </div>
+            </div>
+
+            <div class="  flex-1" > 
+                <div>
+                    <div class="mb-3 text-white font-weight-600"> Help and info</div>
+             <div class="mb-3"> <a> Contact us </a></div>
+             <div class="mb-3"> <a>About Us </a></div>
+             <div class="mb-3"><a> Help and support </a></div>
+             <div class="mb-3">  <a>Collect a missed delivery </a></div>
+             <div class="mb-3">  <a>I think my mail is lost </a>  </div>
+             <div class="mb-3"><a>Service updates</a> </div>
+             <div class="mb-3"> <a>How to make a claim </a> </div>
+             <div class="mb-3"> <a>Sustainability </a></div>
+             <div class="mb-3"> <a> Dog Awareness </a></div> 
+             <div class="mb-3"> <a>The future of letter deliveries </a></div> 
+             <div class="w-50 mt-4">
+                <img  class="w-100" src="https://www.royalmail.com/themes/custom/rmlcwr/images/logos/scam-guidance.png" alt="">
+             </div>
+            </div>
+            </div>
+
+            <div class="  flex-1" > 
+                <div>
+
+                    <div class="mb-3 text-white font-weight-600"> Mail</div>
+                <div class="mb-3"><a> UK services </a></div>
+                <div class="mb-3"><a> International services</a> </div>
+                <div class="mb-3"> <a> Stamps</a></div>
+                <div class="mb-3"> <a> Our prices </a> </div>
+                <div class="mb-3"><a>Redirect your mail</a></div>
+
+            </div>
+
+            </div>
+            <div class=" flex-1" > 
+                <div>
+
+                    <div class="mb-3 text-white font-weight-600"> Our partners</div>
+                <div class="mb-3"> <a>Parcelforce Worldwide </a></div>
+                <div class="mb-3"> <a>Stamp retailers</a></div>
+                <div class="mb-3"> <a>British Heart Foundation</a></div>
+                <div style="width:40%;" > 
+                    <img class="w-100" src="https://www.royalmail.com/themes/custom/rmlcwr/images/logos/keep-me-posted.png" alt="">
+                </div>
+                
+            </div>
+            
+            </div>
+         
+        </div> 
+        <!-- desktop footer ends here-->
+
+
+         <!-- mboile footer starts here-->
+         <div class="d-flex flex-column  d-lg-none">
+        <div class="mb-3">Parcelforce Worldwide </div>
+        <div class="mb-3"> Stamp retailers</div>
+        <div class="mb-3">British Heart Foundation</div>
+        <div class="mb-3">Parcelforce Worldwide </div>
+        <div class="mb-3"> Stamp retailers</div>
+        <div class="mb-3">British Heart Foundation</div>
+         </div>
+
+
+        <div class=" mt-5"> 
+          <a href="#" class=" fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+        </div> 
+    </div>
+
+    <div class="w-100 bg-secondary ">
+    <div class="container  main-footer-padding d-flex justify-content-center justify-content-md-between  py-1">  
+        <div class=""> <img style="max-width:100%;" src="https://www.royalmail.com/sites/royalmail.com/files/styles/scale_100px_height/public/2020-08/SafeSpace-logo.png?itok=2nxp_ipP" alt=""></div>
+        <div class="d-none d-md-block"  style="line-height: 108px;"> together we can end domestic abuse</div>
+       
+
+    </div> 
+</div>
+
+
+<div class="w-100 bg-black  " style="font-size: 16px;">
+    <div class="d-flex flex-column container  main-footer-padding">
+    <div class="container  d-flex justify-content-center justify-content-md-start   py-4 flex-wrap px-0">  
+        <div class="mb-3 me-3 me-md-5"> Jobs</div>
+        <div class="mb-3  me-3 me-md-5">  International Distribution Services</div>
+        <div class="mb-3  me-3 me-md-5">  Terms and conditions</div>
+        <div class="mb-3 me-3 me-md-5">  Privacy</div>
+        <div class="mb-3 me-3 me-md-5"> Change Consent Preferences</div>
+        <div class="mb-3 me-3 me-md-5">  Terms of use </div>
+        <div class="mb-3 me-3 me-md-5"> Cookies</div>
+        <div class="mb-3 me-3 me-md-5">  Accessibility</div>
+        <div class=" me-3">  Cymraeg</div> 
+        
+    </div> 
+    <div class="text-center text-md-start"> © Royal Mail 2024 </div>
+</div>
+
+</div>
+    </footer>
+      <script src="index.js"></script>
+    <script> 
+ 
+
+        const hamburger = document.getElementById('hamburger_menu');
+        const navbar = document.getElementById('mobile_nav');
+    
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('left'); // Toggles the class on click
+        });
+        
+         const crossButton = document.getElementById('cross');
+    
+         crossButton.addEventListener('click', () => {
+            navbar.classList.toggle('left'); // Toggles the class on click
+        });
+    </script>
+</body>
+</html>
