@@ -17,7 +17,8 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
 </script>
     <title>Basic HTML Page</title>
-    <style>
+   
+ <style>
 ul li a {
         color: black; /* Set this to your desired color */
     }
@@ -208,16 +209,16 @@ animation-duration:2s;
 padding-bottom: 280px!important; 
 }
 .mobile-pos {
-bottom: 248px!important;
+ margin-top: -210px;
+ bottom: 30px;
+
 }
 
 .mobile-text-spider-section span {
 font-size: 21px!important;
 
 }
-.margin-mobile-spider-section{
-    margin-top: -205px;
-}
+
 
 .mobile-text h1 {
 font-size: 40px!important;
@@ -233,13 +234,22 @@ font-size: 18px!important;
 
    }
 
+/*  tablet media querys and claases  */
+@media only screen and (min-width: 700px) {
+    .position-absolute-md{
+    position: absolute!important;
+    transform: translate(-50%,-50%)!important;
+    left:75%!important;
+    top:50%!important;
+}
 
+}
 
 
 /*  desktop media querys and claases  */
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1100px) {
 .padding-nav-bar {
    padding-left: 215px!important; 
    padding-right: 215px!important;
@@ -257,7 +267,8 @@ font-size: 18px!important;
 } 
 
    .desktop-pos {
-     bottom:92px;
+    margin-top: -62px;
+    bottom:-32px;
    }
 
    .main-content-padding {
@@ -283,9 +294,9 @@ padding-bottom:80px;
 
 .position-absolute-md{
     position: absolute!important;
-    transform: translate(-50%,-50%)!important;;
-    left:75%!important;;
-    top:50%!important;;
+    transform: translate(-50%,-50%)!important;
+    left:75%!important;
+    top:50%!important;
 }
 
 .main-footer-padding{
@@ -299,13 +310,9 @@ footer a:hover{
 }
 
 
-
-
-
 /*  desktop media querys and claases end here  */
 
     </style>
-
 
 
 </head>
