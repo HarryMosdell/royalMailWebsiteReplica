@@ -17,8 +17,7 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
 </script>
     <title>Basic HTML Page</title>
-   
- <style>
+    <style>
 ul li a {
         color: black; /* Set this to your desired color */
     }
@@ -268,7 +267,7 @@ font-size: 18px!important;
 
    .desktop-pos {
     margin-top: -62px;
-    bottom:35px; 
+    bottom:35px;
    }
 
    .main-content-padding {
@@ -310,9 +309,13 @@ footer a:hover{
 }
 
 
+
+
+
 /*  desktop media querys and claases end here  */
 
     </style>
+
 
 
 </head>
@@ -340,7 +343,7 @@ footer a:hover{
 
 <div class="   "> 
 <!-- desktop right side of the navbar !-->
-<div class="d-none d-md-flex  align-items-center">
+<div class="d-none d-lg-flex  align-items-center">
     <div class="me-3 red-text-hover"> <a> Log in </a> <span> |</span>  <a> Register </a></div>    
 
     <div class="red-text-hover-icon"> <a>  <i  style="font-size:22px; color:black; " class=" fa fa-search me-3"></i> </a></div>
@@ -382,7 +385,7 @@ footer a:hover{
     
        <div class="container">
         <div class="row  main-content-padding px-3 header-animation header-animation-mobile"  >
- <div class="col-lg-6 mobile-text mobile-text-paragraph"> 
+ <div class="col-md-6 mobile-text mobile-text-paragraph"> 
 <h1 class="text-white font-weight-600 mb-md-2 mb-0" > your delivery is </h1>
 <h1 class="mt-md-2 mt-0"> <span class="text-yellow big-yellow-text "> IN GOOD HANDS</span>
 
@@ -399,22 +402,25 @@ footer a:hover{
 
 
  </div>
- <div class="col-lg-6  px-0 " >
+ <div class="col-md-6  px-0 " >
 
     <div  class=" "> <!-- wrapper main section of form starts here-->
 
         <div  class=" "> <!-- wrapper header section of form starts here-->
    <!-- header for form starts here-->
   <div class=" d-flex gap-2 ">  
-     <div style="font-weight:bold;" class="bg-white py-2 px-5 border "> Send</div>
-     <div class="bg-white py-2 px-5 border"> Track</div>
+     <div id="send-info-button" style="font-weight:bold;" class="bg-white py-2 px-5 border " onclick="toggleDisplay('send-info', 'track-info', 'send-info-button', 'track-info-button')"> Send</div>
+     <div id="track-info-button" class="bg-white py-2 px-5 border opacity-75" onclick="toggleDisplay('track-info', 'send-info','track-info-button', 'send-info-button')"> Track</div>
   </div>
   </div><!-- wrapper header section of form ends here-->
 <!-- header for form ends here-->
 
 <!-- main section of form starts here-->
 <div class="border-example bg-white">
+ 
 <div class="px-4  mt-4 py-1 " >
+
+    <div class="d-block" id="send-info" >
 <div class="font-weight-bold" > What are you looking to send?</div>
 <div class="w-100  bg-white py-3 px-2" style="border:1px solid grey;" > What are you looking to send?</div>
 <button class="w-100 position-relative button  py-3 mt-3 d-flex justify-content-center gap-2 font-weight-bold button-hover"  >
@@ -425,6 +431,24 @@ footer a:hover{
 <div class="d-flex justify-content-md-center mt-4 mb-2 red-text-hover flex-column flex-md-row align-items-center gap-1 gap-md-5" style=" font-size:15px;" >
 <div > <a class="text-decoration-underline"> UK delivery prices </a> </div>
 <div>  <a class="text-decoration-underline">  International prices </a></div>
+
+</div>
+
+</div>
+
+
+    <div class="d-none h-100" id="track-info">
+<div class="font-weight-bold" > Enter reference number</div>
+<div class="w-100  bg-white py-3 px-2" style="border:1px solid grey;" > eg FRED1212</div>
+<button class="w-100 position-relative button  py-3 mt-3 d-flex justify-content-center gap-2 font-weight-bold button-hover"  >
+    <div style="height:23px; width:23px;"> <img class="w-100" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_functional_hero_send.svg" alt=""></div>
+    
+    Track your delivery</button>
+<div style="font-size:15px; margin-bottom:54px;" class="text-center mt-3 red-text-hover"> <a style=""class="text-decoration-underline"> Misssed a delivery?</a> </div>
+
+
+</div>
+
 </div>
 </div>
 </div>
@@ -433,9 +457,6 @@ footer a:hover{
  </div>
 </div>
        
-
-   
-
  </div>
 
 </div>
@@ -549,7 +570,7 @@ footer a:hover{
     <h2 class="text-start  d-block d-lg-none font-weight-bold ">  Lets find the right service for you</h2>
     <h1  style=" font-size:40px;" class="  d-none d-lg-block font-weight-bold  py-0">  Lets find the right service for you</h1>
     <div class="row ">
-<div class="col-md-4   p-0  " >
+<div class="col-12 col-md-6 col-lg-4   p-0  " >
     <div class="  h-100 px-3  ">
      <div class=" h-100 px-3 pt-4 shadow-effect position-relative">
    <div class="w-100">
@@ -591,7 +612,7 @@ footer a:hover{
 
 
 
-    <div class="col-md-4   p-0 mt-4 mt-md-0" >
+    <div class="col-12 col-md-6 col-lg-4   p-0 mt-4 mt-md-0" >
         <div class="  h-100 px-3  ">
          <div class=" h-100 px-3 pt-4 shadow-effect position-relative">
        
@@ -631,7 +652,7 @@ footer a:hover{
 </div>
 
 
-<div class="col-md-4   p-0 mt-4 mt-md-0" >
+<div class="col-12 col-md-6 col-lg-4   p-0 mt-4 mt-lg-0" >
     <div class="  h-100 px-3  ">
      <div class=" h-100 px-3 pt-4 shadow-effect position-relative">
         
@@ -787,10 +808,12 @@ footer a:hover{
 <div class="w-100  position-relative ">
 <div class="w-100  ">
     <img class="w-100 d-none d-lg-block" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_fwb_sustainability_desktop.jpg" alt="">
-    <img class="w-100 d-lg-none d-block "  src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_fwb_sustainability_mobile.jpg" alt="">
+    <img class="w-100 d-none d-md-block d-lg-none "  src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_fwb_sustainability_tablets.jpg" alt="">
+    <img class="w-100 d-sm-none d-block "  src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_fwb_sustainability_mobile.jpg" alt="">
+
 
 </div>
-<div class="col-md-4 bg-white px-4  py-5 px-md-5 position-absolute-md border-radius-full   " >
+<div class="col-12 col-md-5 col-lg-4 bg-white px-4  py-5 px-md-5 position-absolute-md border-radius-full   " >
     <div class="d-block d-lg-none  ">
         <h1 class="font-weight-600" style="font-size: 40px; font-family: RMFirstClass Inline!important;">
             
@@ -813,7 +836,7 @@ footer a:hover{
       <div class="container  main-footer-padding d-flex flex-column  py-4">  
       <!-- desktop footer-->
         <div class="d-md-flex d-none "> 
-            <div class="flex-1 " > 
+            <div class="flex-1 me-md-4 me-lg-0" > 
                 <div>
 
              <div class="mb-3 text-white font-weight-600"><a>  Tools  </a></div>
@@ -826,7 +849,7 @@ footer a:hover{
             </div>
             </div>
 
-            <div class="  flex-1" > 
+            <div class="  flex-1 me-md-4 me-lg-0" > 
                 <div>
                     <div class="mb-3 text-white font-weight-600"> Help and info</div>
              <div class="mb-3"> <a> Contact us </a></div>
@@ -845,7 +868,7 @@ footer a:hover{
             </div>
             </div>
 
-            <div class="  flex-1" > 
+            <div class="  flex-1 me-md-4 me-lg-0" > 
                 <div>
 
                     <div class="mb-3 text-white font-weight-600"> Mail</div>
@@ -858,7 +881,7 @@ footer a:hover{
             </div>
 
             </div>
-            <div class=" flex-1" > 
+            <div class=" flex-1 me-md-4 me-lg-0" > 
                 <div>
 
                     <div class="mb-3 text-white font-weight-600"> Our partners</div>
@@ -878,7 +901,7 @@ footer a:hover{
 
 
          <!-- mboile footer starts here-->
-         <div class="d-flex flex-column  d-lg-none">
+         <div class="d-flex flex-column  d-md-none">
         <div class="mb-3">Parcelforce Worldwide </div>
         <div class="mb-3"> Stamp retailers</div>
         <div class="mb-3">British Heart Foundation</div>
@@ -947,6 +970,29 @@ footer a:hover{
             navbar.classList.toggle('d-none');
             
         });
+
+
+
+        function toggleDisplay(showId, hideId,buttonId,otherButton) {
+    // Get the elements by their IDs
+    const showElement = document.getElementById(showId);
+    const hideElement = document.getElementById(hideId);
+    const buttonColor= document.getElementById(buttonId);
+    const otherButtonColor= document.getElementById(otherButton);
+    // Show the intended element by removing 'd-none' and adding 'd-block'
+    showElement.classList.remove('d-none');  // Makes the element visible
+    showElement.classList.add('d-block');    // Ensures the element is displayed as a block
+   
+    otherButtonColor.classList.add('opacity-75');
+   
+    buttonColor.classList.remove('opacity-75');
+
+    // Hide the other element by removing 'd-block' and adding 'd-none'
+    hideElement.classList.remove('d-block'); // Removes the block display style
+    hideElement.classList.add('d-none');     // Hides the element
+    
+ 
+}
     </script>
 </body>
 </html>
