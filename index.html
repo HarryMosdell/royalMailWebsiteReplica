@@ -16,7 +16,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
 </script>
-    <title>Basic HTML Page</title>
+
+<!-- Slick CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+<!-- Slick Theme CSS (optional) -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    
+<title>Basic HTML Page</title>
     <style>
 ul li a {
         color: black; /* Set this to your desired color */
@@ -214,7 +222,7 @@ padding-bottom: 280px!important;
 }
 
 .mobile-form-margin-bottom {
-    margin-bottom: 79.7px!important;
+    margin-bottom: 81px!important;
 }
 
 .mobile-text-spider-section span {
@@ -573,7 +581,8 @@ footer a:hover{
    <div class="container  service-row-padding py-5  ">
     <h2 class="text-start  d-block d-lg-none font-weight-bold ">  Lets find the right service for you</h2>
     <h1  style=" font-size:40px;" class="  d-none d-lg-block font-weight-bold  py-0">  Lets find the right service for you</h1>
-    <div class="row ">
+    <div class="row">
+
 <div class="col-12 col-md-6 col-lg-4   p-0  " >
     <div class="  h-100 px-3  ">
      <div class=" h-100 px-3 pt-4 shadow-effect position-relative">
@@ -746,7 +755,7 @@ footer a:hover{
    <h1 class="font-weight-bold"> Help is on the way </h1> 
    <h5> We have plenty of useful features to help make your day that little bit easier </h5> 
 </div>
-<div class="row  p-0">
+<div id="slider" class="row  p-0 slick-slider">
 
     <div class="col-md-4    px-3 ">
         <div class="bg-white h-100 d-flex flex-column shadow-effect element-hover-image-scaling">
@@ -770,7 +779,7 @@ footer a:hover{
             <div style="" class="overflow-hidden ">
                 
                 <img class="w-100 d-none d-lg-block" style="height:196.922px;" src=" https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_promos_health.jpg" alt="">
-                <img class="w-100 d-block d-lg-none" style="height:163.922px;"  src="https://www.royalmail.com/sites/royalmail.com/files/2024-07/hp_parcel_collect.jpg" alt="">
+                <img class="w-100 d-block d-lg-none" style="height:163.922px;"  src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_promos_health.jpg" alt="">
 
             </div>
 
@@ -792,7 +801,7 @@ footer a:hover{
             <div class="overflow-hidden ">
                 
                 <img class="w-100 d-none d-lg-block" style="height:196.922px;" src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_promos_help.jpg" alt="">
-                <img class="w-100 d-block d-lg-none" style="height:163.922px;"  src="https://www.royalmail.com/sites/royalmail.com/files/2024-07/hp_parcel_collect.jpg" alt="">
+                <img class="w-100 d-block d-lg-none" style="height:163.922px;"  src="https://www.royalmail.com/sites/royalmail.com/files/2024-05/hp_promos_help.jpg" alt="">
 
             </div>
 
@@ -804,8 +813,8 @@ footer a:hover{
         </div>
 
         </div>
-</div>
 
+    </div>
 </div>
 
 
@@ -998,5 +1007,50 @@ footer a:hover{
  
 }
     </script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Slick JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+
+
+$(document).ready(function(){
+    $('.slick-slider').slick({
+        slidesToShow: 3, // Show 3 slides at a time
+        slidesToScroll: 1,
+        autoplay: false,
+        infinite: false,
+        autoplaySpeed: 2000,
+        dots: true, // Adds navigation dots below
+        arrows: true, // Shows next/prev arrows
+        responsive: [
+            {
+              breakpoint: 2000,
+              settings: {
+                dots:false,
+                slidesToShow: 3,
+               
+              }
+              
+            },
+         
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    });
+});
+
+
+</script>
+
+
 </body>
 </html>
