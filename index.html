@@ -98,19 +98,14 @@ box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 56px 0px;
     background-color: rgb(218, 32, 42);
    }
 
-.border {
+.border-top-right-left {
   border-bottom: 0px!important;
   border-top-right-radius: 10px!important;
   border-top-left-radius: 10px;
 
 }
 
-.border-example {
-  border: 1px solid white!important;
-  border-top-right-radius: 10px!important;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
+
 .flex-1{
           flex:1 1 0;  
         }
@@ -208,6 +203,16 @@ animation-duration:2s;
 
 }
 
+.mobile-form-header-width {
+ width: calc( 50% - .25rem); 
+}
+
+.form-border-mobile {
+  border: 1px solid white!important;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
 .left {
     left:10%;
 }
@@ -215,6 +220,7 @@ animation-duration:2s;
 .padding-header-mobile {
 padding-bottom: 280px!important; 
 }
+
 .mobile-pos {
  margin-top: -210px;
  bottom: 30px;
@@ -254,6 +260,13 @@ font-size: 18px!important;
     top:50%!important;
 }
 
+.form-border-tablets-desktop {
+    border: 1px solid white!important;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px!important;
+    border-bottom-left-radius: 10px!important;
+    
+}
 }
 
 
@@ -421,14 +434,14 @@ footer a:hover{
         <div  class=" "> <!-- wrapper header section of form starts here-->
    <!-- header for form starts here-->
   <div class=" d-flex gap-2 ">  
-     <div id="send-info-button" style="font-weight:bold;" class="bg-white py-2 px-5 border " onclick="toggleDisplay('send-info', 'track-info', 'send-info-button', 'track-info-button')"> Send</div>
-     <div id="track-info-button" class="bg-white py-2 px-5 border opacity-75" onclick="toggleDisplay('track-info', 'send-info','track-info-button', 'send-info-button')"> Track</div>
+     <div id="send-info-button" style="font-weight:bold;" class="bg-white py-2 px-5 border-top-right-left mobile-form-header-width" onclick="toggleDisplay('send-info', 'track-info', 'send-info-button', 'track-info-button')"> Send</div>
+     <div id="track-info-button" class="bg-white py-2 px-5 border-top-right-left opacity-75 mobile-form-header-width" onclick="toggleDisplay('track-info', 'send-info','track-info-button', 'send-info-button')"> Track</div>
   </div>
   </div><!-- wrapper header section of form ends here-->
 <!-- header for form ends here-->
 
 <!-- main section of form starts here-->
-<div class="border-example bg-white">
+<div class="form-border-mobile form-border-tablets-desktop  bg-white">
  
 <div class="px-4  mt-4 py-1 " >
 
